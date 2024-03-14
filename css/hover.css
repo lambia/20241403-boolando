@@ -1,0 +1,59 @@
+/* soluzione che altera il display, scambiando le due immagini
+solo un'immagine per volta è visibile */
+/* .card:hover .image-primary {
+    display: none;
+}
+
+.card:hover .image-hover {
+    display: block;
+}
+
+.image-primary {
+    display: block;
+}
+
+.image-hover {
+    display: none;
+}
+*/
+
+/* soluzione che altera lo z-index.
+entrambe le immagini sono visibili ma una copre l'altra
+per usare uno z-index c'è bisogno di una position non-default */
+/*
+.card:hover .image-hover {
+    z-index: 3;
+} 
+
+.image-primary {
+    position: relative;
+    z-index: 2;
+}
+
+.image-hover {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+/* soluzione che altera l'opacity. immagini sovrapposte come la precedente,
+ma solo una alla volta è visibile.
+opacity è animabile, mentre display e z-index no, sono "on-off" */
+
+.card:hover .image-hover {
+    opacity: 1;
+}
+
+.image-primary {
+    position: relative;
+    opacity: 1;
+}
+
+.image-hover {
+    opacity: 0;
+    transition: 450ms;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

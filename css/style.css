@@ -1,0 +1,118 @@
+/*************** COMMON *******************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222;
+    color: white;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+
+/*************** HEADER *******************/
+header {
+    background-color: #ff6900;
+    box-shadow: 0 1px 3px #666;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    font-weight: 500;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.menu-left {
+    width: 25%;
+    padding: 0 1rem;
+}
+
+.menu-logo {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-right {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 1rem;
+}
+
+.menu-logo-img {
+    height: 2rem;
+    display: block;
+}
+
+
+/***************** MAIN **************/
+main {
+    padding-top: 5rem;
+}
+
+.card {
+    width: calc(100% / 3);
+    padding: 1rem;
+}
+
+/* contenitore relative per usare l'absolute (es. badge) */
+.card-image {
+    position: relative;
+}
+
+/********** FINE HOVER SOLUZIONE B (ANIMAZIONE) *********/
+
+.badge {
+    top: 1rem;
+    right: 0;
+    position: absolute;
+    background-color: crimson;
+    color: white;
+    padding: 0.5rem;
+}
+
+/*********** FOOTER ***************/
+footer {
+    margin-top: 2rem;
+    background-color: #333;
+    padding: 2rem 1rem;
+}
